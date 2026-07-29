@@ -28,16 +28,16 @@ header{
     background:#000;
     color:white;
     text-align:center;
-    padding:12px;
+    padding:15px;
 }
 
 header h1{
-    font-size:28px;
-    margin-bottom:3px;
+    font-size:30px;
+    margin-bottom:5px;
 }
 
 header h3{
-    font-size:15px;
+    font-size:16px;
     color:#d9d9d9;
     font-weight:normal;
 }
@@ -45,17 +45,25 @@ header h3{
 /* ================= NAVBAR ================= */
 
 .navbar{
+
+    margin-top:15px;
+
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+
     background:#000;
-    margin-top:12px;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:8px 0;
+
+    padding:10px 0;
+
 }
 
 .nav-links{
-    list-style:none;
     display:flex;
+    list-style:none;
 }
 
 .nav-links li{
@@ -63,52 +71,81 @@ header h3{
 }
 
 .nav-links a{
+
     text-decoration:none;
     color:white;
-    padding:8px 14px;
+
     font-size:15px;
     font-weight:bold;
-    border-radius:4px;
-    transition:.3s;
+
+    padding:8px 16px;
+
+    transition:0.3s;
+
 }
 
 .nav-links a:hover{
-    background:#1E90FF;
+
+    color:#4da6ff;
+
 }
 
 /* ================= CONTENT ================= */
 
 .container{
+
     flex:1;
+
     width:90%;
+
     max-width:1100px;
+
     margin:20px auto;
+
     background:white;
+
     padding:25px;
+
     border-radius:8px;
-    box-shadow:0 2px 10px rgba(0,0,0,.15);
+
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+
 }
 
 .container h2{
+
     text-align:center;
+
     font-size:28px;
+
     margin-bottom:15px;
+
 }
 
 .container p{
+
     font-size:17px;
+
     line-height:1.6;
-    text-align:justify;
+
+    text-align:center;
+
 }
 
 /* ================= FOOTER ================= */
 
 footer{
+
     background:#000;
+
     color:white;
+
     text-align:center;
-    padding:10px;
+
+    padding:12px;
+
     font-size:14px;
+
 }
 
 </style>
@@ -120,6 +157,7 @@ footer{
 <header>
 
     <h1>Placement Prediction System</h1>
+
     <h3>Learning Machine Learning using Flask</h3>
 
 </header>
@@ -147,7 +185,9 @@ footer{
 </div>
 
 <footer>
+
     © 2026 Placement Prediction System | Flask + Machine Learning
+
 </footer>
 
 </body>
