@@ -2,40 +2,29 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
 @app.route("/")
-def index():
+def home():
     return render_template("home.html")
-
 
 @app.route("/dataset")
 def dataset():
-    return render_template("dataset.html")
-
+    return "<h2>Dataset Page</h2>"
 
 @app.route("/eda")
 def eda():
-    return render_template("eda.html")
-
+    return "<h2>EDA Page</h2>"
 
 @app.route("/preprocessing")
 def preprocessing():
-    return render_template("preprocessing.html")
-
+    return "<h2>Preprocessing Page</h2>"
 
 @app.route("/models")
 def models():
-    return render_template("models.html")
-
+    return "<h2>Models Page</h2>"
 
 @app.route("/results")
 def results():
-    return render_template("results.html")
-
+    return "<h2>Results Page</h2>"
 
 if __name__ == "__main__":
-    app.run(
-        host="127.0.0.1",
-        port=5000,
-        debug=True
-    )
+    app.run(debug=True)
