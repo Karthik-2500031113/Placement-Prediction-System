@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Placement Prediction System</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:12px;
+}
+
+header h1{
+    font-size:28px;
+    margin-bottom:3px;
+}
+
+header h3{
+    font-size:15px;
+    color:#d9d9d9;
+    font-weight:normal;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background:#000;
+    margin-top:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:8px 0;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+}
+
+.nav-links li{
+    margin:0 8px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    padding:8px 14px;
+    font-size:15px;
+    font-weight:bold;
+    border-radius:4px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    background:#1E90FF;
+}
+
+/* ================= CONTENT ================= */
+
+.container{
+    flex:1;
+    width:90%;
+    max-width:1100px;
+    margin:20px auto;
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+.container h2{
+    text-align:center;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.container p{
+    font-size:17px;
+    line-height:1.6;
+    text-align:justify;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Placement Prediction System</h1>
+    <h3>Learning Machine Learning using Flask</h3>
+
+</header>
+
+<nav class="navbar">
+
+    <ul class="nav-links">
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/dataset">Dataset</a></li>
+        <li><a href="/eda">EDA</a></li>
+        <li><a href="/preprocessing">Preprocessing</a></li>
+        <li><a href="/models">Models</a></li>
+        <li><a href="/results">Results</a></li>
+
+    </ul>
+
+</nav>
+
+<div class="container">
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+<footer>
+    © 2026 Placement Prediction System | Flask + Machine Learning
+</footer>
+
+</body>
+</html>
