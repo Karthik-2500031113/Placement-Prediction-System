@@ -1,194 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Placement Prediction System</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:#f4f6f9;
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    background:#000;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-
-header h1{
-    font-size:30px;
-    margin-bottom:5px;
-}
-
-header h3{
-    font-size:16px;
-    color:#d9d9d9;
-    font-weight:normal;
-}
-
-/* ================= NAVBAR ================= */
-
-.navbar{
-
-    margin-top:15px;
-
-    border-top:1px solid #000;
-    border-bottom:1px solid #000;
-
-    background:#000;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:10px 0;
-
-}
-
-.nav-links{
-    display:flex;
-    list-style:none;
-}
-
-.nav-links li{
-    margin:0 8px;
-}
-
-.nav-links a{
-
-    text-decoration:none;
-    color:white;
-
-    font-size:15px;
-    font-weight:bold;
-
-    padding:8px 16px;
-
-    transition:0.3s;
-
-}
-
-.nav-links a:hover{
-
-    color:#4da6ff;
-
-}
-
-/* ================= CONTENT ================= */
-
-.container{
-
-    flex:1;
-
-    width:90%;
-
-    max-width:1100px;
-
-    margin:20px auto;
-
-    background:white;
-
-    padding:25px;
-
-    border-radius:8px;
-
-    box-shadow:0 0 10px rgba(0,0,0,0.15);
-
-}
-
-.container h2{
-
-    text-align:center;
-
-    font-size:28px;
-
-    margin-bottom:15px;
-
-}
-
-.container p{
-
-    font-size:17px;
-
-    line-height:1.6;
-
-    text-align:center;
-
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-
-    background:#000;
-
-    color:white;
-
-    text-align:center;
-
-    padding:12px;
-
-    font-size:14px;
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Prediction System</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
 <body>
+    <!-- Header -->
+    <header>
+        <h1>Placement Prediction System</h1>
+        <p>Machine Learning Project using Flask</p>
 
-<header>
+    </header>
+    <hr>
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/dataset">Dataset</a> |
+        <a href="/eda">EDA</a> |
+        <a href="/preprocessing">Preprocessing</a> |
+        <a href="/models">Models</a> |
+        <a href="/evaluation">Evaluation</a> |
+        <a href="/comparison">Comparison</a> |
+        <a href="/prediction">Prediction</a>
+    </nav>
+    <hr>
+    <!-- Page Content -->
+    <div>
+        {% block content %}
 
-    <h1>Placement Prediction System</h1>
-
-    <h3>Learning Machine Learning using Flask</h3>
-
-</header>
-
-<nav class="navbar">
-
-    <ul class="nav-links">
-
-        <li><a href="/">Home</a></li>
-        <li><a href="/dataset">Dataset</a></li>
-        <li><a href="/eda">EDA</a></li>
-        <li><a href="/preprocessing">Preprocessing</a></li>
-        <li><a href="/models">Models</a></li>
-        <li><a href="/results">Results</a></li>
-
-    </ul>
-
-</nav>
-
-<div class="container">
-
-    {% block content %}
-    {% endblock %}
-
-</div>
-
-<footer>
-
-    © 2026 Placement Prediction System | Flask + Machine Learning
-
-</footer>
-
+        {% endblock %}
+    </div>
 </body>
 </html>
